@@ -13,6 +13,16 @@ Join [OSMUS Slack](https://slack.openstreetmap.us/) #sonoma-import channel for q
 File generation is complete: https://github.com/watmildon/Redmond-Import/blob/master/Redmond-Import/Addresses_in_Redmond___address_point_fixed.geojson
 
 Approval for import pending.
+
+## Field mapping
+ADDR_NUM -> addr:housenumber
+FULLNAME -> addr:street via getformattedstreetname(FULL_ST_NA)
+Unit -> addr:unit
+POSTALCTYNAME -> addr:city
+ZIP5-PLUS4 -> addr:postcode
+
+TODO: Add state info?
+
 ## Import and validation
 
 TODO: set up tasking for this import
