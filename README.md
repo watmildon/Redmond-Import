@@ -15,11 +15,11 @@ File generation is complete: https://github.com/watmildon/Redmond-Import/blob/ma
 Approval for import pending.
 
 ## Field mapping
--ADDR_NUM -> addr:housenumber
--FULLNAME -> addr:street via getformattedstreetname(FULL_ST_NA)
--Unit -> addr:unit
--POSTALCTYNAME -> addr:city
--ZIP5-PLUS4 -> addr:postcode
+- ADDR_NUM -> addr:housenumber
+- FULLNAME -> addr:street via getformattedstreetname(FULL_ST_NA)
+- Unit -> addr:unit
+- POSTALCTYNAME -> addr:city
+- ZIP5-PLUS4 -> addr:postcode
 
 TODO: Add state info?
 
