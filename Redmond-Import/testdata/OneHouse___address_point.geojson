@@ -1,0 +1,67 @@
+{
+	"type": "FeatureCollection",
+	"name": "Addresses_in_Redmond___address_point",
+	"crs": {
+		"type": "name",
+		"properties": {
+			"name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+		}
+	},
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"OBJECTID": 123456,
+				"SITEID": "{AAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA}",
+				"COMMENTS": null,
+				"SITETYPE": "R1",
+				"Alias1": null,
+				"Alias2": null,
+				"Alias3": null,
+				"Alias4": null,
+				"Alias5": null,
+				"Building": null,
+				"Unit": "D",
+				"ADDR_HN": "18233",
+				"ADDR_PD": "NE",
+				"ADDR_PT": null,
+				"ADDR_SN": "102ND",
+				"ADDR_ST": "CT",
+				"ADDR_SD": null,
+				"ADDR_NUM": 18233,
+				"ADDR_FULL": "12345 NE 123RD CT",
+				"FULLNAME": "NE 123RD CT",
+				"COMPRESS_NAME": "NE123RDCT",
+				"COMPRESS_ADDR": "12345NE123RDCT",
+				"ZIPSECTORL": "32",
+				"ZIPSEG_L": "64",
+				"ZIPSECTORH": "32",
+				"ZIPSEG_H": "64",
+				"ZIP5": "98052",
+				"PLUS4": "1234",
+				"CR_ID": "C025",
+				"UPDATE_KEY": "Z123456789",
+				"CTYNAME": "REDMOND",
+				"POSTALCTYNAME": "REDMOND",
+				"LAT": 47.000001,
+				"LON": -122.000001,
+				"PRIM_ADDR": 1,
+				"PRIM_ADDR_FILTER": "E911:ONETOONE",
+				"SITETYPE_DESCRIPTION": "Single Family",
+				"POINT_X": 1234567.03,
+				"POINT_Y": 123456.51,
+				"COUNTY": "KING",
+				"MAJOR": "123456",
+				"MINOR": "1234",
+				"PIN": "123456123"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.000001,
+					47.000001
+				]
+			}
+		}
+	]
+}
