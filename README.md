@@ -6,8 +6,6 @@ Based on https://github.com/zyphlar/sonoma-import/
 
 Please see TODO:Create OSM wikipage for the official project page.
 
-Join [OSMUS Slack](https://slack.openstreetmap.us/) #sonoma-import channel for questions/comments.
-
 ## Project Status
 
 File generation is complete: https://github.com/watmildon/Redmond-Import/blob/master/Redmond-Import/Addresses_in_Redmond___address_point_fixed.geojson
