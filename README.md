@@ -1,10 +1,7 @@
 # Redmond-Import
-Process King County GIS address data for OSM import
-# Sonoma County Building/Parcel/Address Import
+Process King County GIS address data for OSM import (based on https://github.com/zyphlar/sonoma-import/)
 
-Based on https://github.com/zyphlar/sonoma-import/
-
-Please see TODO:Create OSM wikipage for the official project page.
+TODO:Create OSM wikipage for the official project page.
 
 ## Project Status
 
@@ -14,9 +11,9 @@ Approval for import pending.
 
 ## Field mapping
 - ADDR_NUM -> addr:housenumber
-- FULLNAME -> addr:street via getformattedstreetname(FULL_ST_NA)
+- FULLNAME -> addr:street via https://github.com/watmildon/Redmond-Import/blob/master/Redmond-Import/Program.cs#L150
 - Unit -> addr:unit
-- POSTALCTYNAME -> addr:city
+- POSTALCTYNAME -> addr:city (fixing casing)
 - ZIP5-PLUS4 -> addr:postcode
 
 TODO: Add state info?
