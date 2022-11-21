@@ -94,8 +94,8 @@ public static class AddressImport
         }
 
         string outFilePath = Path.Combine(Path.GetDirectoryName(GEOJSON_FILE_PATH),
-            Path.GetFileNameWithoutExtension(GEOJSON_FILE_PATH),
-            "_OSM",
+            Path.GetFileNameWithoutExtension(GEOJSON_FILE_PATH) +
+            "_OSM." +
             Path.GetExtension(GEOJSON_FILE_PATH));
 
         JsonSerializer serializer = new JsonSerializer();
