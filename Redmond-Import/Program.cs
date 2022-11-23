@@ -7,7 +7,8 @@ using System.Text.RegularExpressions;
 
 public static class AddressImport
 {
-    static string GEOJSON_FILE_PATH = @"..\..\..\testdata\OneHouse___address_point.geojson";
+    //static string GEOJSON_FILE_PATH = @"..\..\..\testdata\OneHouse___address_point.geojson";
+    static string GEOJSON_FILE_PATH = @"E:\openstreetmap\KingCountyData\Addresses_in_Redmond___address_point.geojson";
     static string CURRENT_OSM_DATA = null;
 
     /*
@@ -34,7 +35,24 @@ public static class AddressImport
 
         //CountDupeGeoJSONForImport();
 
+        PrintPointsForConvexHull(kingCountyData);
+
         return;
+    }
+
+    private static void PrintPointsForConvexHull(KingCountyGeoJSON kingCountyData)
+    {
+        List<Point> points = new List<Point>();
+        foreach (var element in kingCountyData.features)
+        {
+            points.Add(new Point(element.geometry.coordinates.ToArray()[0], element.geometry.coordinates.ToArray()[1]));
+        }
+
+        var hull = ConvexHull.GetConvexHull(points);
+        foreach (var point in hull)
+        {
+            Console.WriteLine($"{point.LAT} {point.LON}");
+        }
     }
 
     private static void CountDupeGeoJSONForImport()
@@ -209,24 +227,56 @@ public static class OsmImportHelpers
         if (name == "NW")
             return "Northwest";
         // Suffixes
+        if (name == "ALY")
+            return "Alley";
+        if (name == "ARC")
+            return "Arcade";
         if (name == "AV")
             return "Avenue";
         if (name == "AVE")
             return "Avenue";
+        if (name == "BLF")
+            return "Bluff";
         if (name == "BLVD")
             return "Boulevard";
         if (name == "BND")
             return "Bend";
+        if (name == "BR")
+            return "Bridge";
+        if (name == "BRG")
+            return "Bridge";
+        if (name == "BYP")
+            return "Bypass";
         if (name == "CIR")
             return "Circle";
+        if (name == "CRES")
+            return "Crescent";
+        if (name == "CSWY")
+            return "Causeway";
         if (name == "CT")
             return "Court";
+        if (name == "CTR")
+            return "Center";
+        if(name == "CV")
+            return "Cove";
         if (name == "DR")
             return "Drive";
+        if (name == "EXPY")
+            return "Expressway";
+        if (name == "EXPWY")
+            return "Expressway";
         if (name == "FLDS")
             return "Fields";
+        if (name == "FMRD")
+            return "Farm to Marker Road";
+        if (name == "FWY")
+            return "Freeway";
+        if (name == "GD")
+            return "Grade";
         if (name == "GRV")
             return "Grove";
+        if (name == "HBR")
+            return "Harbor";
         if (name == "HOLW")
             return "Hollow";
         if (name == "HW")
@@ -235,28 +285,70 @@ public static class OsmImportHelpers
             return "Highway";
         if (name == "LN")
             return "Lane";
+        if (name == "LNDG")
+            return "Landing";
         if (name == "LP")
             return "Loop";
         if (name == "LOOP")
             return "Loop";
+        if (name == "MAL")
+            return "Mall";
+        if (name == "MTWY")
+            return "Motorway";
+        if (name == "OVPS")
+            return "Overpass";
         if (name == "PATH")
             return "Path";
+        if (name == "PKY")
+            return "Parkway";
+        if (name == "PKWY")
+            return "Parkway";
         if (name == "PL")
             return "Place";
+        if (name == "PLZ")
+            return "Plaza";
         if (name == "RD")
             return "Road";
+        if (name == "RDG")
+            return "Ridge";
+        if (name == "RMRD")
+            return "Ranch to Market Road";
+        if (name == "RTE")
+            return "Route";
         if (name == "RUN")
             return "Run";
+        if (name == "SKWY")
+            return "Skyway";
+        if (name == "SQ")
+            return "Square";
         if (name == "ST")
             return "Street";
         if (name == "TER")
             return "Terrace";
+        if (name == "TFWY")
+            return "Trafficway";
+        if (name == "THFR")
+            return "Thoroughfare";
+        if (name == "THWY")
+            return "Throughway";
         if (name == "TL")
             return "Trail";
         if (name == "TRL")
             return "Trail";
+        if (name == "TUNL")
+            return "Tunnel";
+        if (name == "TPKE")
+            return "Turnpike";
+        if (name == "TRCE")
+            return "Trace";
+        if (name == "TRL")
+            return "Trail";
+        if (name == "UNP")
+            return "Underpass";
         if (name == "VW")
             return "View";
+        if (name == "WKWY")
+            return "Walkway";
         if (name == "WAY")
             return "Way";
         if (name == "XING")
