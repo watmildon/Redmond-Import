@@ -181,6 +181,7 @@ public static class OsmImportHelpers
         return result;
     }
 
+    // This assumes name starts in all caps
     private static string ExpandPart(string name)
     {
         //Ported from the script at https://gitlab.com/zyphlar/salem-import
@@ -322,7 +323,7 @@ public static class OsmImportHelpers
         if (name == "SQ")
             return "Square";
         if (name == "ST")
-            return "Street";
+            return "Street"; // TODO Need some handling here for ST for saint vs ST for street
         if (name == "TER")
             return "Terrace";
         if (name == "TFWY")
@@ -358,6 +359,9 @@ public static class OsmImportHelpers
             return "McCray";
         if (name == "MCKOWN")
             return "McKown";
+        // French!
+        if (name == "DU")
+            return "du";
 
         return name = Capitalize(name);
     }
