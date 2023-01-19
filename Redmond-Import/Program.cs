@@ -273,7 +273,7 @@ public static class OsmImportHelpers
         if (name == "FLDS")
             return "Fields";
         if (name == "FMRD")
-            return "Farm to Marker Road";
+            return "Farm to Market Road";
         if (name == "FWY")
             return "Freeway";
         if (name == "GD")
@@ -366,9 +366,13 @@ public static class OsmImportHelpers
         if (name == "McGraw")
             return "McGraw";
 
-        // French!
+        // Foreign language!
         if (name == "DU")
             return "du";
+        if (name == "DEL")
+            return "del";
+        if(name == "LA")
+            return "la";
 
         return name = Capitalize(name);
     }
