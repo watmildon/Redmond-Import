@@ -181,6 +181,10 @@ public static class OsmImportHelpers
         return result;
     }
 
+    //TODO review and steal ideas from: 
+    // https://github.com/maxerickson/simpleaddress/blob/master/simpleaddress/simpleaddress.py
+    // https://github.com/JaredOSM/vermont-address-import/blob/main/generate_osm_file_from_e911_geojson.php#L354
+    // https://wiki.openstreetmap.org/wiki/Name_finder:Abbreviations#English
     // This assumes name starts in all caps
     private static string ExpandPart(string name)
     {
@@ -354,11 +358,14 @@ public static class OsmImportHelpers
             return "Way";
         if (name == "XING")
             return "Crossing";
-        // Irish names
+        // Mc names
         if (name == "MCCRAY")
             return "McCray";
         if (name == "MCKOWN")
             return "McKown";
+        if (name == "McGraw")
+            return "McGraw";
+
         // French!
         if (name == "DU")
             return "du";
